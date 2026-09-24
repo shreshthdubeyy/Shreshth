@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Independent Builds & System Specifications | Shreshth Dubey</title>
+
+  <meta name="description"
+    content="Independent software builds and complete system specifications by Shreshth Dubey — spanning air cargo operations, delivery tooling, offline PWAs, and consumer health.">
+  <meta property="og:title" content="Independent Builds & System Specifications | Shreshth Dubey">
+  <meta property="og:description"
+    content="Five independently designed and shipped products with full architectural and technical specifications.">
+  <meta property="og:type" content="website">
+
+  <!-- External Stylesheets & Fonts -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body data-theme="light">
+  <!-- Scroll Progress Indicator -->
+  <div id="scroll-progress"></div>
+
+  <!-- Navigation Bar (Self-contained, no index.html links) -->
+  <nav>
+    <div class="nav-brand" style="cursor: pointer;" onclick="showBuildsCatalog()">SD.ANALYST</div>
+    <div class="nav-right">
+      <div class="theme-toggle" id="theme-btn" tabindex="0" role="button" aria-label="Toggle dark/light theme">
+        <span class="toggle-pill">
+          <i class="fas fa-moon"></i>
+        </span>
+      </div>
+      <a href="#builds" class="nav-link" onclick="showBuildsCatalog()">Builds</a>
+      <a href="#contact" class="nav-link" id="nav-contact-link">Contact</a>
+    </div>
+  </nav>
+
+  <!-- Main Content Layout -->
+  <main class="container">
+
+    <!-- =========================================================================
+         VIEW 1: BUILDS CATALOG VIEW (Default)
+         ========================================================================= -->
+    <div id="builds-view">
+      <!-- Hero Section -->
+      <section class="hero" data-aos="fade-up">
+        <img src="https://i.postimg.cc/wxJdbQGK/1763016603325.png" alt="Shreshth Dubey" class="avatar">
+        <div>
+          <h1>Shreshth Dubey</h1>
+          <p class="hero-tag">Analyst - Product Excellence · Independent Builds</p>
+          <div class="academic-pills">
+            <span class="pill">MBA · IIIT Ranchi</span>
+            <span class="pill"><i class="fas fa-map-marker-alt"></i> India</span>
+          </div>
+          <p class="hero-specialty">Enabling Business Success with Tailored SaaS Solutions &amp; Working Prototypes</p>
+        </div>
+      </section>
+
+      <!-- Independent Builds Section (Bento Card) -->
+      <section class="bento-card builds" id="builds" data-aos="fade-up">
+        <div class="builds-header">
+          <div class="section-header-tag">INDEPENDENT BUILDS</div>
+          <h2>Beyond the Requirements Doc</h2>
+          <p class="hero-specialty">
+            Five independently designed and shipped products — spanning delivery tooling, air cargo operations, civic data collection, and consumer health — built end-to-end to validate the specs I write, not just author them.
+          </p>
+        </div>
+
+        <!-- Featured Row (Two Flagship Cards) -->
+        <div class="builds-featured-grid">
+          <!-- Synapse -->
+          <div class="project-card featured-build-card" data-project-id="synapse" data-aos="zoom-in" data-aos-delay="100">
+            <div>
+              <div class="card-top-row">
+                <div class="project-category">Product &amp; Delivery Tooling</div>
+                <span class="chip-featured"><i class="fas fa-star"></i> Featured</span>
+              </div>
+              <h4>Synapse — Jira Delivery Intelligence</h4>
+              <p>A command center for Jira delivery paths — SVG dependency graphs, sprint metrics, and contextual Gemini AI issue risk analysis, built from inside the PM workflow.</p>
+              <div class="competence-tag"><i class="fas fa-network-wired"></i> Graph UI &amp; AI Delivery Intelligence</div>
+              <div class="chip-container" style="margin-top: 14px;">
+                <span class="chip">Vanilla JS</span>
+                <span class="chip">SVG Canvas</span>
+                <span class="chip">Google Apps Script</span>
+                <span class="chip">Gemini AI</span>
+              </div>
+            </div>
+            <div>
+              <div class="build-links">
+                <a href="https://shreshthdubeyy.github.io/Synapse/" target="_blank" rel="noopener noreferrer" class="build-link-btn">
+                  Live Demo <i class="fas fa-arrow-up-right-from-square"></i>
+                </a>
+                <a href="?spec=synapse" class="build-link-btn" onclick="openSpecView(event, 'synapse')" title="View Synapse Technical Architecture">
+                  System Spec <i class="fas fa-file-code"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- CrewTask -->
+          <div class="project-card featured-build-card" data-project-id="crewtask" data-aos="zoom-in" data-aos-delay="200">
+            <div>
+              <div class="card-top-row">
+                <div class="project-category">Domain-Native Systems</div>
+                <span class="chip-featured"><i class="fas fa-star"></i> Featured</span>
+              </div>
+              <h4>CrewTask — Air Cargo Warehouse Operations &amp; WDO ERP</h4>
+              <p>An ERP-grade warehouse delivery order and consignment-tracking platform, built to replace phone tag and spreadsheet chaos on the cargo floor.</p>
+              <div class="competence-tag"><i class="fas fa-database"></i> 12-Table Schema &amp; RBAC Operations</div>
+              <div class="chip-container" style="margin-top: 14px;">
+                <span class="chip">PHP</span>
+                <span class="chip">MySQL</span>
+                <span class="chip">Vanilla JS</span>
+                <span class="chip">PWA</span>
+                <span class="chip">RBAC</span>
+              </div>
+            </div>
+            <div>
+              <div class="build-links">
+                <a href="https://shreshthdubeyy.site.je/CrewTask" target="_blank" rel="noopener noreferrer" class="build-link-btn">
+                  Live Demo <i class="fas fa-arrow-up-right-from-square"></i>
+                </a>
+                <a href="?spec=crewtask" class="build-link-btn" onclick="openSpecView(event, 'crewtask')" title="View CrewTask Database Schema &amp; Architecture">
+                  System Spec <i class="fas fa-file-code"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Standard Row (Three Cards) -->
+        <div class="builds-standard-grid">
+          <!-- AWB Mod-7 Tool -->
+          <div class="project-card" data-project-id="awb-mod7" data-aos="zoom-in" data-aos-delay="100">
+            <div>
+              <div class="project-category">Domain-Native Systems</div>
+              <h4>AWB Mod-7 Tool</h4>
+              <p>A browser extension that generates and verifies Air Waybill numbers using IATA's Mod-7 standard — the same check-digit logic CrewTask's ticketing depends on.</p>
+              <div class="competence-tag"><i class="fas fa-calculator"></i> IATA Standard &amp; Manifest V3</div>
+              <div class="chip-container" style="margin-top: 12px;">
+                <span class="chip">JavaScript</span>
+                <span class="chip">WebExtensions API</span>
+                <span class="chip">Manifest V3</span>
+              </div>
+            </div>
+            <div>
+              <div class="build-links">
+                <a href="https://shreshthdubeyy.github.io/AWB/" target="_blank" rel="noopener noreferrer" class="build-link-btn">
+                  Live Demo <i class="fas fa-arrow-up-right-from-square"></i>
+                </a>
+                <a href="?spec=awb-mod7" class="build-link-btn" onclick="openSpecView(event, 'awb-mod7')" title="View IATA Mod-7 Technical Specification">
+                  System Spec <i class="fas fa-file-code"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- CensusConnect -->
+          <div class="project-card" data-project-id="censusconnect" data-aos="zoom-in" data-aos-delay="200">
+            <div>
+              <div class="project-category">Range &amp; Craft</div>
+              <h4>CensusConnect — Field Demographic Registry</h4>
+              <p>A mobile-first PWA for field enumerators capturing household and socio-economic survey data offline, in English or Hindi.</p>
+              <div class="competence-tag"><i class="fas fa-language"></i> Offline PWA &amp; Bilingual i18n</div>
+              <div class="chip-container" style="margin-top: 12px;">
+                <span class="chip">PWA</span>
+                <span class="chip">Vanilla JS</span>
+                <span class="chip">Google Apps Script</span>
+                <span class="chip">i18n</span>
+              </div>
+            </div>
+            <div>
+              <div class="build-links">
+                <a href="https://shreshthdubeyy.github.io/CensusConnect/" target="_blank" rel="noopener noreferrer" class="build-link-btn">
+                  Live Demo <i class="fas fa-arrow-up-right-from-square"></i>
+                </a>
+                <a href="?spec=censusconnect" class="build-link-btn" onclick="openSpecView(event, 'censusconnect')" title="View Demographic Registry Specification">
+                  System Spec <i class="fas fa-file-code"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Fitness OS -->
+          <div class="project-card" data-project-id="fitness-os" data-aos="zoom-in" data-aos-delay="300">
+            <div>
+              <div class="project-category">Range &amp; Craft</div>
+              <h4>Fitness OS</h4>
+              <p>A phone-first, fully private fitness and nutrition engine — precision calorie budgeting, workout logging, and an AI coach, with no data ever leaving the device.</p>
+              <div class="competence-tag"><i class="fas fa-user-shield"></i> 100% Client-Side Engine &amp; Next.js</div>
+              <div class="chip-container" style="margin-top: 12px;">
+                <span class="chip">Next.js</span>
+                <span class="chip">TypeScript</span>
+                <span class="chip">Tailwind CSS</span>
+                <span class="chip">PWA</span>
+              </div>
+            </div>
+            <div>
+              <div class="build-links">
+                <a href="https://fitness-os-rouge.vercel.app/" target="_blank" rel="noopener noreferrer" class="build-link-btn">
+                  Live Demo <i class="fas fa-arrow-up-right-from-square"></i>
+                </a>
+                <a href="?spec=fitness-os" class="build-link-btn" onclick="openSpecView(event, 'fitness-os')" title="View Mifflin-St Jeor &amp; Architecture Spec">
+                  System Spec <i class="fas fa-file-code"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Unified Contact & Connect Section -->
+      <section class="bento-card form-card" id="contact" data-aos="fade-up">
+        <div class="form-content" id="form-container">
+          <div class="contact-header">
+            <h2>Let's Work Together</h2>
+            <p>
+              I'm always open to discussing new opportunities, business analysis challenges, or collaboration on high-impact SaaS products.
+            </p>
+          </div>
+
+          <form class="formspree-form" id="contact-form" action="https://formspree.io/f/xyzkyvbw" method="POST">
+            <div class="form-group">
+              <label for="name">Your Name</label>
+              <input type="text" id="name" name="name" placeholder="e.g. John Doe" required>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="_replyto" placeholder="john@company.com" required>
+            </div>
+
+            <div class="form-group full-width">
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" name="subject" placeholder="Project Inquiry / Job Opportunity" required>
+            </div>
+
+            <div class="form-group full-width">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" placeholder="Tell me about your project, timeline, and goals..." required></textarea>
+            </div>
+
+            <button type="submit" class="submit-btn">
+              Send Message <i class="fas fa-paper-plane"></i>
+            </button>
+          </form>
+        </div>
+
+        <!-- Success Confirmation State -->
+        <div class="form-success-state" id="form-success" style="display: none;">
+          <div class="success-icon-wrapper">
+            <i class="fas fa-check-circle"></i>
+          </div>
+          <h3>Message Dispatched!</h3>
+          <p>
+            Thank you for reaching out. Your transmission has landed in my priority queue — I'll respond within 24 hours.
+          </p>
+          <button type="button" class="submit-btn" id="form-reset-btn" style="width: auto; padding: 10px 24px;">
+            Send Another Message <i class="fas fa-redo"></i>
+          </button>
+        </div>
+      </section>
+    </div>
+
+    <!-- =========================================================================
+         VIEW 2: DEDICATED SPECIFICATION VIEW (Clean Single-Spec Reader)
+         ========================================================================= -->
+    <div id="spec-view" class="spec-container" style="display: none;">
+
+      <!-- SPEC: SYNAPSE -->
+      <section class="spec-detail-wrapper bento-card spec-card" id="spec-synapse">
+        <header class="spec-header">
+          <div class="spec-header-nav">
+            <a href="build.html" class="spec-back-btn" onclick="showBuildsCatalog(event)">
+              <i class="fas fa-arrow-left"></i> Back to Builds
+            </a>
+            <a href="https://shreshthdubeyy.github.io/Synapse/" target="_blank" rel="noopener noreferrer" class="credly-link" style="margin-top:0;">
+              LAUNCH LIVE SYNAPSE <i class="fas fa-arrow-up-right-from-square"></i>
+            </a>
+          </div>
+
+          <h1 class="spec-title">🌌 Synapse — Jira Delivery Intelligence</h1>
+
+          <div class="spec-badges">
+            <span class="chip">Gemini AI Analysis</span>
+            <span class="chip">SVG Dependency Graph</span>
+            <span class="chip">iOS 16 Glassmorphism</span>
+            <span class="chip">DOMPurify XSS Filter</span>
+            <span class="chip">3-Panel Command Center</span>
+          </div>
+
+          <p class="spec-lead">
+            A command center for Jira delivery paths — interactive SVG dependency graphs, sprint delivery metrics, and contextual Gemini AI issue risk analysis, built directly from inside the PM workflow. Designed with a native iOS 16 frosted glass aesthetic and spring-physics interaction models.
+          </p>
+        </header>
+
+        <article class="spec-content">
+          <h2><i class="fas fa-cubes"></i> 1. Workspace Architecture</h2>
+          <p>Synapse integrates delivery execution and risk assessment into a unified three-panel cockpit:</p>
+
+          <div class="spec-card-grid">
+            <div class="feature-spec-box">
+              <h4>🗂️ Epic Navigator &amp; Sprint Health</h4>
+              <ul>
+                <li><strong>Epic Summaries:</strong> Active Epic hierarchy, key deliverables, and target sprint deadlines.</li>
+                <li><strong>Progress &amp; Velocity:</strong> Real-time completion meters and status distribution (Todo / In Progress / Done / Blocked).</li>
+                <li><strong>Fast Filter Chips:</strong> Instant one-click filtering by issue state, assignee, or priority without page reloads.</li>
+              </ul>
+            </div>
+            <div class="feature-spec-box">
+              <h4>📋 Detailed Issue Inspector</h4>
+              <ul>
+                <li><strong>Metadata Chips:</strong> Sprint assignments, story point estimates, priority badges, and issue types.</li>
+                <li><strong>Tabbed Deep Dive:</strong> Markdown description viewer, live comments stream, linked issue relationships, attachments, and audit history timeline.</li>
+                <li><strong>DOMPurify Sanitization:</strong> All rendered Markdown and ticket descriptions are strictly sanitized against XSS.</li>
+              </ul>
+            </div>
+          </div>
+
+          <h2><i class="fas fa-robot"></i> 2. Contextual Gemini AI Analysis</h2>
+          <p>
+            Traditional issue trackers record what happened in the past, but fail to predict what will stall delivery in the future. Synapse embeds an AI delivery copilot directly in the <strong>Contextual Intelligence</strong> sidebar:
+          </p>
+
+          <div class="feature-spec-box" style="margin-bottom: 20px;">
+            <h4>✨ Automated Issue Diagnostics &amp; Risk Formulation</h4>
+            <ul>
+              <li><strong>⚡ Instant Risk Assessment:</strong> Analyzes ticket descriptions, comments, and subtask dependencies to identify hidden technical debt, ambiguous requirements, and scope creep.</li>
+              <li><strong>🚧 Blocker &amp; Dependency Detection:</strong> Uncovers critical path bottlenecks, upstream prerequisites, and stalled cross-team handoffs.</li>
+              <li><strong>❓ Open Questions &amp; Next Actions:</strong> Generates targeted clarifying questions for engineering standups and sprint planning to eliminate delivery ambiguity before coding begins.</li>
+              <li><strong>⏳ Interactive Skeleton Loading:</strong> Smooth UI feedback with animated shimmer states while fetching Gemini AI reasoning via serverless proxy.</li>
+            </ul>
+          </div>
+
+          <h2><i class="fas fa-network-wired"></i> 3. Dependency Graph Engine</h2>
+          <p>
+            Replaces manual cross-referencing with a dedicated graph canvas that dynamically models relationships:
+          </p>
+          <ul>
+            <li><strong>Dynamic Vector Paths:</strong> Generates smooth Bezier curves connecting parent Epics, child issues, and blocking dependencies (`blocks`, `is blocked by`, `relates to`).</li>
+            <li><strong>Bottleneck &amp; Critical Path Highlighting:</strong> Visually isolates blocked issues and high-risk nodes so delivery leads can identify release blockers at a glance.</li>
+            <li><strong>Interactive Canvas Toolset:</strong> Custom pan, zoom, and auto-centering controls built purely in Vanilla JS and SVG without heavy third-party graph dependencies.</li>
+          </ul>
+
+          <h2><i class="fas fa-wand-magic-sparkles"></i> 4. Design &amp; Motion System</h2>
+          <ul>
+            <li><strong>🌌 Pastel Fluid Backdrop:</strong> Warp-animating vector mesh blobs float behind frosted glass, shifting colors dynamically to correspond with Light/Dark theme changes.</li>
+            <li><strong>✨ Frosted Glassmorphism:</strong> High-blur surfaces (<code>backdrop-filter: blur(24px) saturate(180%)</code>) with semi-transparent, ultra-thin borders for optimal contrast.</li>
+            <li><strong>🎛️ Segmented Capsule Controls:</strong> Navigation inputs and detail tabs styled as elevated capsule buttons inside rounded sliding tracks matching native iOS settings.</li>
+            <li><strong>💫 Tactile Spring Easing:</strong> Custom cubic curves (<code>cubic-bezier(0.16, 1, 0.3, 1)</code> and <code>cubic-bezier(0.34, 1.56, 0.64, 1)</code>) paired with a tactile press-scale down (<code>transform: scale(0.96)</code>) on click targets.</li>
+          </ul>
+
+          <h2><i class="fas fa-shield-halved"></i> 5. Backend Proxy &amp; Security</h2>
+          <ul>
+            <li><strong>Google Apps Script Gateway (`Code.gs`):</strong> Acts as a secure, serverless CORS proxy between the static client and the Gemini AI API, ensuring zero private API keys or tokens are exposed to the browser.</li>
+            <li><strong>XSS Prevention:</strong> All user-supplied descriptions and AI-generated outputs pass through DOMPurify sanitization.</li>
+            <li><strong>Zero Client Secrets:</strong> Enterprise credential headers and AI tokens remain fully secured on the backend.</li>
+          </ul>
+        </article>
+      </section>
+
+      <!-- SPEC: CREWTASK -->
+      <section class="spec-detail-wrapper bento-card spec-card" id="spec-crewtask">
+        <header class="spec-header">
+          <div class="spec-header-nav">
+            <a href="build.html" class="spec-back-btn" onclick="showBuildsCatalog(event)">
+              <i class="fas fa-arrow-left"></i> Back to Builds
+            </a>
+            <a href="https://shreshthdubeyy.site.je/CrewTask" target="_blank" rel="noopener noreferrer" class="credly-link" style="margin-top:0;">
+              LAUNCH LIVE CREWTASK <i class="fas fa-arrow-up-right-from-square"></i>
+            </a>
+          </div>
+
+          <h1 class="spec-title">✈️ CrewTask — Air Cargo Warehouse Operations &amp; WDO ERP</h1>
+
+          <div class="spec-badges">
+            <span class="chip">PHP 7.4 – 8.3</span>
+            <span class="chip">MySQL / MariaDB</span>
+            <span class="chip">12 Relational Tables</span>
+            <span class="chip">Mobile PWA Ready</span>
+            <span class="chip">Zero-Framework Vanilla Arch</span>
+          </div>
+
+          <p class="spec-lead">
+            Enterprise-grade, zero-bloat Air Cargo Warehouse Delivery Order (WDO) &amp; Consignment Tracking Platform. Designed by cargo operations professionals to replace messy spreadsheets, phone tag, and lost freight with real-time visibility, shift accountability, and instant immutable audit trails.
+          </p>
+        </header>
+
+        <article class="spec-content">
+          <h2><i class="fas fa-layer-group"></i> 1. Operational Overview</h2>
+          <p>
+            Air cargo floor operations require split-second status handovers across multi-tier shifts, rapid physical cargo location tagging, customs clearance coordination with <strong>Customs House Agents (CHAs)</strong>, and strict chain-of-custody compliance. CrewTask delivers this through an ultra-responsive, lightweight architecture with zero framework overhead.
+          </p>
+
+          <h2><i class="fas fa-route"></i> 2. Cargo Lifecycle Workflow</h2>
+          <p>Every shipment advances through a structured, auditable 5-stage lifecycle state machine:</p>
+          
+          <div class="workflow-box">
+            <div class="workflow-step">
+              <span class="step-badge">STAGE 1</span>
+              <div><strong>📥 Intake &amp; Allocation (Allocated):</strong> Generates unique Warehouse Delivery Order (WDO) numbers linked to Master Air Waybill (MAWB) and House Air Waybill (HAWB), allocating initial bay/rack location.</div>
+            </div>
+            <div class="workflow-step">
+              <span class="step-badge">STAGE 2</span>
+              <div><strong>📍 Bay Retrieval (Parcel Located):</strong> Floor marshals locate the consignment on warehouse racks, scan tags, and confirm physical presence via the touch PWA.</div>
+            </div>
+            <div class="workflow-step">
+              <span class="step-badge">STAGE 3</span>
+              <div><strong>🔍 Customs Clearance (Moved to Examination):</strong> Consignment moves to customs inspection bay; clearing agent seal numbers and release orders are recorded.</div>
+            </div>
+            <div class="workflow-step">
+              <span class="step-badge">STAGE 4</span>
+              <div><strong>🚛 Gate Dispatch (Moved to Delivery Gate):</strong> Validates IATA Mod-7 AWB check-digit algorithms and issues gate pass for cargo truck loading.</div>
+            </div>
+            <div class="workflow-step">
+              <span class="step-badge">STAGE 5</span>
+              <div><strong>✅ Final Handover (Delivered):</strong> Receiver sign-off, final timestamping, and automatic archival with immutable audit logging.</div>
+            </div>
+          </div>
+
+          <h2><i class="fas fa-shield-halved"></i> 3. Role-Based Access Control (RBAC)</h2>
+          <table class="spec-table">
+            <thead>
+              <tr>
+                <th>Feature / Capability</th>
+                <th>🔴 Administrator (`admin`)</th>
+                <th>🟡 Supervisor (`supervisor`)</th>
+                <th>🟢 Operations (`ops`)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td><strong>View Operations Workbench</strong></td><td>✅</td><td>✅</td><td>✅</td></tr>
+              <tr><td><strong>New Cargo Intake (Create Tickets)</strong></td><td>✅</td><td>✅</td><td>✅</td></tr>
+              <tr><td><strong>Update Cargo Status (Move Stages)</strong></td><td>✅</td><td>✅</td><td>✅</td></tr>
+              <tr><td><strong>PWA Mobile Floor App</strong></td><td>✅</td><td>✅</td><td>✅</td></tr>
+              <tr><td><strong>Carry Forward Management</strong></td><td>✅</td><td>✅</td><td>❌</td></tr>
+              <tr><td><strong>Re-open Delivered Tickets</strong></td><td>✅</td><td>✅</td><td>❌</td></tr>
+              <tr><td><strong>Shift Handover / EOD Management</strong></td><td>✅</td><td>✅</td><td>❌</td></tr>
+              <tr><td><strong>User Approvals &amp; Account Control</strong></td><td>✅</td><td>❌</td><td>❌</td></tr>
+              <tr><td><strong>System Settings &amp; Theme Defaults</strong></td><td>✅</td><td>❌</td><td>❌</td></tr>
+              <tr><td><strong>View Full System Audit Trail</strong></td><td>✅</td><td>❌</td><td>❌</td></tr>
+              <tr><td><strong>Force Logout Sessions</strong></td><td>✅</td><td>❌</td><td>❌</td></tr>
+            </tbody>
+          </table>
+
+          <h2><i class="fas fa-database"></i> 4. Relational Database Schema (12 Tables)</h2>
+          <p>The relational architecture uses indexed foreign constraints and InnoDB storage engine:</p>
+          <ul>
+            <li><code>tickets</code> — Core cargo manifest storing WDO, MAWB, HAWB, package counts, locations, and lifecycle statuses.</li>
+            <li><code>ticket_status_log</code> — Timestamped audit of every status transition across shifts.</li>
+            <li><code>staff_assignment</code> — Staff allocation and shift duty assignment history per consignment.</li>
+            <li><code>ticket_audit_log</code> — Comprehensive change history capturing old vs. new values, operator IDs, and timestamps.</li>
+            <li><code>users</code> — User profiles, Bcrypt credentials, approval statuses, and session versions.</li>
+            <li><code>password_resets</code> — Expiring, single-use security tokens for password resets.</li>
+            <li><code>site_settings</code> — Key-value system configuration store (e.g., default theme).</li>
+            <li><code>cha_list</code> — Directory of active Customs House Agents.</li>
+            <li><code>locations</code> — Warehouse storage bays, cold rooms, and rack zones.</li>
+            <li><code>admin_activity_log</code> — Administrative audit trail for role changes, approvals, and system adjustments.</li>
+            <li><code>login_attempt_log</code> — Security log tracking failed and successful authentication events by IP.</li>
+            <li><code>shift_notes</code> — Digital logbook for handover notes between shifts.</li>
+          </ul>
+
+          <h2><i class="fas fa-lock"></i> 5. Security &amp; Session Hardening</h2>
+          <ul>
+            <li><strong>SQL Injection Prevention:</strong> 100% of dynamic queries use parameterized prepared statements (<code>$stmt-&gt;prepare()</code> / <code>$stmt-&gt;bind_param()</code>).</li>
+            <li><strong>Cross-Site Request Forgery (CSRF):</strong> All mutating POST and AJAX requests require a valid session CSRF token verified via <code>includes/csrf.php</code>.</li>
+            <li><strong>Cross-Site Scripting (XSS):</strong> Output rendering is sanitised through <code>htmlspecialchars()</code> with strict UTF-8 encoding.</li>
+            <li><strong>Session Protection:</strong> Session cookies use <code>HttpOnly</code>, <code>SameSite=Lax</code>, and <code>Secure</code> flags when HTTPS is active.</li>
+            <li><strong>Instant Revocation:</strong> Incrementing <code>session_version</code> in the database immediately invalidates compromised or stale user sessions without restarting the server.</li>
+          </ul>
+
+          <h2><i class="fas fa-sitemap"></i> 6. Directory Structure</h2>
+          <pre class="spec-code-block"><code>CrewTask/
+├── ajax/                         # Asynchronous backend endpoints
+│   ├── admin_action.php          # User approvals, role modification, suspension
+│   ├── bulk_update.php           # Batch cargo status update handler
+│   ├── cha_dashboard_fetch.php   # Real-time CHA stats and data stream
+│   ├── dashboard_fetch.php       # Real-time metrics for operations workbench
+│   ├── export.php                # Filtered CSV export generator
+│   ├── force_logout.php          # Instant session termination API
+│   ├── get_audit_log.php         # Paginated historical audit logger
+│   ├── locations.php             # Warehouse bay/rack directory management
+│   ├── query_search.php          # Deep multi-parameter search engine
+│   ├── ticket_save.php           # Cargo intake and ticket creation endpoint
+│   └── ticket_update.php         # Status transitions and staff assignments
+├── cha/                          # External CHA Portal
+│   ├── index.php                 # Public / Agent cargo status portal
+│   └── tracker.php               # Live AWB tracking search endpoint
+├── css/
+│   ├── styles.css                # Base desktop workbench stylesheets
+│   └── pwa.css                   # Mobile-first touch terminal stylesheets
+├── includes/
+│   ├── auth.php                  # Session authentication & role gating
+│   ├── config.php                # Database connection & PDO settings
+│   ├── csrf.php                  # Anti-CSRF token verification
+│   └── functions.php             # Core formatting & shift calculation helpers
+├── js/
+│   ├── app.js                    # Operations workbench UI controller
+│   └── pwa.js                    # Touch terminal & barcode scanner scripts
+├── admin.php                     # System administration & user management
+├── audit.php                     # Immutable event ledger viewer
+├── carry_forward.php             # Shift-boundary cargo reconciliation
+├── dashboard.php                 # Core Operations Command Center
+├── index.php                     # Authentication & Login portal
+├── pwa.php                       # Warehouse Floor PWA
+└── schema.sql                    # Production 12-table relational schema DDL</code></pre>
+        </article>
+      </section>
+
+      <!-- SPEC: AWB MOD-7 -->
+      <section class="spec-detail-wrapper bento-card spec-card" id="spec-awb-mod7">
+        <header class="spec-header">
+          <div class="spec-header-nav">
+            <a href="build.html" class="spec-back-btn" onclick="showBuildsCatalog(event)">
+              <i class="fas fa-arrow-left"></i> Back to Builds
+            </a>
+            <a href="https://shreshthdubeyy.github.io/AWB/" target="_blank" rel="noopener noreferrer" class="credly-link" style="margin-top:0;">
+              LAUNCH LIVE AWB TOOL <i class="fas fa-arrow-up-right-from-square"></i>
+            </a>
+          </div>
+
+          <h1 class="spec-title">✈️ AWB Mod-7 Tool — Technical Specification</h1>
+
+          <div class="spec-badges">
+            <span class="chip">Manifest V3</span>
+            <span class="chip">100% Offline Client-Side</span>
+            <span class="chip">IATA Standard Check-Digit</span>
+            <span class="chip">Cross-Browser (Chrome / Firefox)</span>
+            <span class="chip">Zero Permissions Required</span>
+          </div>
+
+          <p class="spec-lead">
+            A zero-dependency, privacy-first browser extension and offline engine to generate and verify Air Waybill (AWB) numbers using IATA's international Mod-7 standard — the same check-digit logic airline ERPs (CargoWise, iCargo, Cargospot, SAP TM) depend on.
+          </p>
+        </header>
+
+        <article class="spec-content">
+          <h2><i class="fas fa-calculator"></i> 1. IATA Mod-7 Algorithm</h2>
+          <p>
+            An Air Waybill tracking number consists of a 3-digit airline prefix followed by an <strong>8-digit serial number</strong> where the 8th digit is an algebraic check digit:
+          </p>
+
+          <div class="math-callout">
+            Structure: [3-Digit Prefix] - [7-Digit Base Serial][1-Digit Check Digit]<br><br>
+            Formula: Check Digit = (7-Digit Base Serial) mod 7<br><br>
+            Example: Base Serial = 1234567<br>
+            Calculation: 1234567 % 7 = 5<br>
+            Full Valid AWB: 176-12345675
+          </div>
+
+          <h2><i class="fas fa-landmark"></i> 2. Industry Rationale: Mod-7 vs. Mod-10 (Luhn)</h2>
+          <p>
+            While banking and credit cards standardized on the Luhn (Mod-10) algorithm to catch character transpositions, the global airline industry adopted Mod-7 in early telex messaging standards because:
+          </p>
+          <ul>
+            <li><strong>Single-Step Compute:</strong> Simple modulo 7 arithmetic required minimal hardware memory in early legacy mainframes.</li>
+            <li><strong>Global Switching Invariance:</strong> Billions of historical physical paper manifests, customs clearing archives, and multi-carrier interline EDI pipelines are anchored on Mod-7, making industry-wide migration costs prohibitive.</li>
+          </ul>
+
+          <h2><i class="fas fa-puzzle-piece"></i> 3. Extension Architecture (Manifest V3)</h2>
+          <ul>
+            <li><strong>Zero Permission Footprint:</strong> Uses <code>permissions: []</code> with zero web access, zero network calls, and zero external tracking.</li>
+            <li><strong>Cross-Browser Manifest:</strong> Packaged for Google Chrome, Brave, Microsoft Edge, Opera, and Mozilla Firefox from one core codebase.</li>
+            <li><strong>Native Clipboard API:</strong> Instant 1-click clipboard write for QA automation and manual terminal data entry.</li>
+          </ul>
+
+          <h2><i class="fas fa-folder-tree"></i> 4. Directory Structure</h2>
+          <pre class="spec-code-block"><code>AWB/
+├── awb-extension/
+│   ├── Chrome/
+│   │   ├── manifest.json       # Manifest V3 configuration
+│   │   ├── popup.html          # Extension popup UI
+│   │   └── popup.js            # Generator & validator logic
+│   ├── 3f7d28398bc441f390dd-1.0.xpi  # Firefox add-on package
+│   ├── Chrome.zip              # Packaged Chrome extension build
+│   └── Mozilla.zip             # Packaged Firefox extension build
+└── README.md                   # Project documentation</code></pre>
+        </article>
+      </section>
+
+      <!-- SPEC: CENSUSCONNECT -->
+      <section class="spec-detail-wrapper bento-card spec-card" id="spec-censusconnect">
+        <header class="spec-header">
+          <div class="spec-header-nav">
+            <a href="build.html" class="spec-back-btn" onclick="showBuildsCatalog(event)">
+              <i class="fas fa-arrow-left"></i> Back to Builds
+            </a>
+            <a href="https://shreshthdubeyy.github.io/CensusConnect/" target="_blank" rel="noopener noreferrer" class="credly-link" style="margin-top:0;">
+              LAUNCH LIVE CENSUSCONNECT <i class="fas fa-arrow-up-right-from-square"></i>
+            </a>
+          </div>
+
+          <h1 class="spec-title">📋 CensusConnect — Field Demographic Registry Specification</h1>
+
+          <div class="spec-badges">
+            <span class="chip">Progressive Web App (PWA)</span>
+            <span class="chip">Offline Service Worker</span>
+            <span class="chip">Bilingual i18n (EN/HI)</span>
+            <span class="chip">Google Apps Script REST</span>
+            <span class="chip">Local Storage Cache</span>
+          </div>
+
+          <p class="spec-lead">
+            A resilient, mobile-first Progressive Web App designed for field enumerators capturing multi-tier household mapping, socio-economic classifications, and living amenity access offline in English or Hindi.
+          </p>
+        </header>
+
+        <article class="spec-content">
+          <h2><i class="fas fa-list-check"></i> 1. Survey Questionnaire Modules</h2>
+          <p>Every surveyed household unit is mapped hierarchically through 4 distinct modules:</p>
+
+          <div class="section-breakdown-card">
+            <h4>📍 Section 1: Household Mapping &amp; Structure</h4>
+            <p>Classifies building structures (Pucca, Semi-Pucca, Kutcha, Independent House, Apartment) and legal tenancy / ownership status.</p>
+          </div>
+
+          <div class="section-breakdown-card">
+            <h4>👤 Section 2: Demographic Profile</h4>
+            <p>Captures Head of Household full legal identity, validated 10-digit mobile contact, total family size, and community grouping.</p>
+          </div>
+
+          <div class="section-breakdown-card">
+            <h4>💼 Section 3: Socio-Economic &amp; Livelihood Registry</h4>
+            <p>Tracks primary livelihood sources (Salaried, Self-Employed, Farming, Daily Wage), unique Socio-Economic IDs (SE-ID), and welfare scheme enrollments (Ration, Ayushman Health, PMAY Housing).</p>
+          </div>
+
+          <div class="section-breakdown-card">
+            <h4>🏠 Section 4: Household Amenities &amp; Field Notes</h4>
+            <p>Audits drinking water sources (treated piped, borewell, tanker), sanitation / cooking fuel facilities, and qualitative field officer observations.</p>
+          </div>
+
+          <h2><i class="fas fa-database"></i> 2. Offline Storage &amp; Backend Sync</h2>
+          <p>
+            CensusConnect ensures field survey continuity even in zero-connectivity environments:
+          </p>
+          <ul>
+            <li><strong>Service Worker Caching (<code>sw.js</code>):</strong> Stores application shells and assets locally for immediate offline loading.</li>
+            <li><strong>Client-Side Storage:</strong> In-flight survey submissions and record modifications persist locally without data loss during connectivity drops.</li>
+            <li><strong>Serverless Cloud Sync:</strong> Pushes validated, structured JSON payloads directly to a centralized Google Sheets / Apps Script database endpoint upon restoration of connectivity.</li>
+          </ul>
+
+          <h2><i class="fas fa-language"></i> 3. Bilingual Internationalization (i18n)</h2>
+          <p>
+            Features dynamic 1-click UI translation between <strong>English</strong> and <strong>हिन्दी (Hindi)</strong>. All form inputs, validation error toasts, dropdowns, and field instructions switch instantly without page reload.
+          </p>
+
+          <h2><i class="fas fa-folder-tree"></i> 4. Directory Structure</h2>
+          <pre class="spec-code-block"><code>CensusConnect/
+├── index.html        # Single-page application markup & navigation
+├── style.css         # Modern CSS tokens, responsive grid & touch UI styles
+├── app.js            # Questionnaire engine, i18n dictionary & data sync
+├── sw.js             # Service worker for offline shell caching (v5)
+├── manifest.json     # Progressive Web App configuration
+├── logo.svg          # Demographic pillar vector emblem
+└── README.md         # Full project documentation</code></pre>
+        </article>
+      </section>
+
+      <!-- SPEC: FITNESS OS -->
+      <section class="spec-detail-wrapper bento-card spec-card" id="spec-fitness-os">
+        <header class="spec-header">
+          <div class="spec-header-nav">
+            <a href="build.html" class="spec-back-btn" onclick="showBuildsCatalog(event)">
+              <i class="fas fa-arrow-left"></i> Back to Builds
+            </a>
+            <a href="https://fitness-os-rouge.vercel.app/" target="_blank" rel="noopener noreferrer" class="credly-link" style="margin-top:0;">
+              LAUNCH LIVE FITNESS OS <i class="fas fa-arrow-up-right-from-square"></i>
+            </a>
+          </div>
+
+          <h1 class="spec-title">⚡ Fitness OS — Technical Specification &amp; Math Engine</h1>
+
+          <div class="spec-badges">
+            <span class="chip">Next.js &amp; TypeScript</span>
+            <span class="chip">100% Client-Side LocalStorage</span>
+            <span class="chip">Mifflin-St Jeor Formula</span>
+            <span class="chip">7-Day Rolling Trend</span>
+            <span class="chip">Multi-Profile PIN Lock</span>
+          </div>
+
+          <p class="spec-lead">
+            A phone-first, fully private fitness and nutrition engine — precision calorie budgeting, OpenGym workout logging, 7-day rolling weight analytics, and an offline-resilient AI coach, with zero data ever leaving the device.
+          </p>
+        </header>
+
+        <article class="spec-content">
+          <h2><i class="fas fa-square-root-variable"></i> 1. Metabolic &amp; Nutrition Formulas</h2>
+
+          <div class="math-card">
+            <strong>1. Basal Metabolic Rate (BMR — Mifflin-St Jeor):</strong><br>
+            BMR(Male)   = 10 × Weight(kg) + 6.25 × Height(cm) - 5 × Age + 5<br>
+            BMR(Female) = 10 × Weight(kg) + 6.25 × Height(cm) - 5 × Age - 161
+          </div>
+
+          <div class="math-card">
+            <strong>2. Total Daily Energy Expenditure (TDEE):</strong><br>
+            TDEE = BMR × Activity Multiplier (1.2× Sedentary to 1.9× Heavy Athletic)
+          </div>
+
+          <div class="math-card">
+            <strong>3. Fat Loss Energy Deficit:</strong><br>
+            1 kg Body Fat ≈ 7,700 kcal energy equivalent<br>
+            Daily Deficit = (7,700 × Planned kg Loss) / Total Days Target
+          </div>
+
+          <div class="math-card">
+            <strong>4. Muscle Preservation Protocol:</strong><br>
+            Protein Target = 2.2 g per kg of body weight to retain lean tissue during caloric deficit.
+          </div>
+
+          <h2><i class="fas fa-robot"></i> 2. AI Coaching Engine &amp; Offline Fallback</h2>
+          <table class="spec-table">
+            <thead>
+              <tr>
+                <th>Engine</th>
+                <th>Trigger Condition</th>
+                <th>Behavior &amp; Architecture</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>🤖 Live OpenAI Engine</strong></td>
+                <td>User provides custom API Key</td>
+                <td>Direct client-side streaming from `gpt-4o-mini` generating contextual adjustments based on 7-day rolling average trends.</td>
+              </tr>
+              <tr>
+                <td><strong>🛡️ Offline Rule-Based Fallback</strong></td>
+                <td>No API Key or Offline Device</td>
+                <td>Deterministic heuristic engine analyzing delta vs target pace across 5 dimensions: Nutrition, Training, Hydration, Recovery, Mindset.</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <h2><i class="fas fa-shield-halved"></i> 3. Client-Side Privacy Architecture</h2>
+          <ul>
+            <li><strong>Partitioned LocalStorage:</strong> Multi-profile isolation (e.g. Personal, Partner, Guest) stored 100% locally.</li>
+            <li><strong>PIN Privacy Lock:</strong> Optional 4-digit PIN encryption for client-side profile security.</li>
+            <li><strong>Zero Data Exfiltration:</strong> No database servers, no tracking analytics, and zero cloud hosting cost.</li>
+          </ul>
+        </article>
+      </section>
+    </div>
+  </main>
+
+  <!-- Global Footer -->
+  <footer class="footer">
+    <div class="footer-links">
+      <a href="https://linkedin.com/in/shreshthdubeyy" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-linkedin"></i> LinkedIn
+      </a>
+      <a href="https://github.com/shreshthdubeyy" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-github"></i> GitHub
+      </a>
+      <a href="mailto:shreshthdubeyy@gmail.com">
+        <i class="fas fa-envelope"></i> Email
+      </a>
+    </div>
+    <div class="footer-copy">
+      &copy; 2026 Shreshth Dubey. Built for performance, clarity, and precision execution.
+    </div>
+  </footer>
+
+  <!-- External Scripts & Libraries -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="script.js"></script>
+
+  <!-- Dynamic Spec Router (Single-File Multi-View Engine) -->
+  <script>
+    function getRequestedSpec() {
+      const urlParams = new URLSearchParams(window.location.search);
+      let spec = urlParams.get('spec');
+      if (!spec && window.location.hash) {
+        const hash = window.location.hash.replace('#', '');
+        if (hash.startsWith('spec-')) {
+          spec = hash.replace('spec-', '');
+        } else if (hash.endsWith('-spec')) {
+          spec = hash.replace('-spec', '');
+        } else if (['synapse', 'crewtask', 'awb-mod7', 'censusconnect', 'fitness-os'].includes(hash)) {
+          spec = hash;
+        }
+      }
+      return spec;
+    }
+
+    function renderView() {
+      const specId = getRequestedSpec();
+      const buildsView = document.getElementById('builds-view');
+      const specView = document.getElementById('spec-view');
+      const specWrappers = document.querySelectorAll('.spec-detail-wrapper');
+
+      if (specId) {
+        const targetWrapper = document.getElementById('spec-' + specId);
+        if (targetWrapper) {
+          buildsView.style.display = 'none';
+          specView.style.display = 'block';
+          specWrappers.forEach(w => w.classList.remove('active'));
+          targetWrapper.classList.add('active');
+          window.scrollTo(0, 0);
+          return;
+        }
+      }
+
+      // Default: show builds catalog
+      specView.style.display = 'none';
+      buildsView.style.display = 'block';
+      specWrappers.forEach(w => w.classList.remove('active'));
+    }
+
+    function openSpecView(e, specId) {
+      if (e) e.preventDefault();
+      history.pushState({ spec: specId }, '', '?spec=' + specId);
+      renderView();
+    }
+
+    function showBuildsCatalog(e) {
+      if (e) e.preventDefault();
+      history.pushState({}, '', 'build.html');
+      renderView();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    window.addEventListener('popstate', renderView);
+    window.addEventListener('DOMContentLoaded', renderView);
+  </script>
+</body>
+
+</html>
